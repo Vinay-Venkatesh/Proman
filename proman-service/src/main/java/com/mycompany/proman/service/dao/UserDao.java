@@ -32,7 +32,7 @@ public class UserDao {
         try{
             return entityManager
                     .createNamedQuery("userByEmail",UserEntity.class) // userByEmail - In UserEntity.Java
-                    .setParameter("email",email) // uuid - In UserEntity.Java - where .... :email(dynamic param)
+                    .setParameter("email",email) // email - In UserEntity.Java - where .... :email(dynamic param)
                     // email - Incoming parameter..
                     .getSingleResult();
         }catch (NoResultException nre){
