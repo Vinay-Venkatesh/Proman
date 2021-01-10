@@ -13,8 +13,8 @@ public class SignupService {
     private UseradminService useradminService;
 
     /*
-       database call - hence @Transactional
-       to ensure that the service invokes transaction for db operations & is completed successfully is not rollback we use - Propagation
+       database call - @Transactional
+       to ensure that the service invokes transaction for db operations & is completed successfully if not rollback the transaction
      */
     @Transactional(propagation = Propagation.REQUIRED)
     public UserEntity signup(UserEntity userEntity){
